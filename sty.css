@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    zoom: 200%;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.number , .simbols{
+  flex-direction: row;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    grid-gap: 12px;
+    justify-content: center; /* added this line to center the columns */
+    
+    margin-top: 10px;
+  }
+  
+  .numbers::after {
+    content: "";
+    grid-column: 2; /* set the column to the second column */
+    position: absolute; /* set position:absolute to the pseudo-element */
+    /*top: 50%; /* move the pseudo-element down by 50% of container height */
+    transform: translateY(-50%); /* move the pseudo-element up by 50% of its height */
+    
+  }
+
+  .numbers button {
+    width: 27px;
+  }
+.input{
+  align-self: center;
+  justify-content: center;
+  width: 135px;
+}
+
+#backspace{
+  size: 40px;
+  border-radius: 50px;
+}
+  
